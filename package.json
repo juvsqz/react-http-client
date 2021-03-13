@@ -1,0 +1,74 @@
+{
+  "name": "react-http-client",
+  "version": "0.1.0",
+  "description": "React hook library for HTTP client",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juvsqz/react-http-client.git"
+  },
+  "keywords": [
+    "react",
+    "hooks",
+    "http client",
+    "rest",
+    "api"
+  ],
+  "author": "Julius Vasquez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juvsqz/react-http-client/issues"
+  },
+  "homepage": "https://github.com/juvsqz/react-http-client#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/preset-typescript": "^7.13.0",
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
+    "@testing-library/dom": "^7.30.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-jest-dom": "^3.6.5",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-testing-library": "^3.10.1",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
+      "jest --bail --findRelatedTests"
+    ],
+    "**/.{js,jsx,ts,tsx,json,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=12.16.3",
+    "yarn": ">=1.22.4"
+  }
+}
