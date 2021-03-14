@@ -40,7 +40,7 @@ function useHttpClient<O = RequestInit>(
     requestHandler = ctxReqHandler,
     responseHandler = ctxResHandler,
     ignoreResponseHandler = false
-  }: HttpClientCallerOptions<O>) {
+  }: HttpClientCallerOptions<O>): Promise<HttpClientResponse> {
     const url = path ? `${_url}${path}` : _url;
 
     if (!isValidUrl(url)) throw new Error(`${url} is not a valid URL!`);
