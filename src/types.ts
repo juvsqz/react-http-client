@@ -63,11 +63,11 @@ export type ResponseHandler<D = any> = (
 
 // This is the function typings for the caller function returned after invoking the
 // http client hook.
-export type HttpClientCallerOptions<O> = {
+export type HttpClientCallerOptions<O = Record<any, any>> = {
   /**
    * Overrides the default RequestHandler's options
    */
-  options: O;
+  options?: O;
 
   /**
    * Add a url path or override the main url for specific request.

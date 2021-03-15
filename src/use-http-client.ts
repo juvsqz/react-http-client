@@ -18,7 +18,7 @@ import { isValidUrl } from './utils';
  * @returns {(options: HttpClientCallerOptions)=> Promise<HttpClientResponse>} is the http client caller function.
  */
 function useHttpClient<O = RequestInit>(
-  _url: string
+  _url: string | null = null
 ): <D = any>(
   options: HttpClientCallerOptions<O>
 ) => Promise<HttpClientResponse<D>> {
@@ -41,11 +41,12 @@ function useHttpClient<O = RequestInit>(
     responseHandler = ctxResHandler,
     ignoreResponseHandler = false
   }: HttpClientCallerOptions<O>): Promise<HttpClientResponse> {
-    const url = path ? `${_url}${path}` : _url;
+    const url = (path ? `${_url || ''}${path}` : _url)?.trim();
 
+    if (!url) throw new Error(`URL should not be empty!`);
     if (!isValidUrl(url)) throw new Error(`${url} is not a valid URL!`);
 
-    const response = await requestHandler<D>(url, options);
+    const response = await requestHandler<D>(url, options || {});
 
     // Immediately return the response
     // and skip the responseHandler execution.

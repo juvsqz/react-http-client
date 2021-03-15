@@ -3,12 +3,12 @@ import { isValidUrl } from 'src/utils';
 describe('Utility function', () => {
   describe('isValidUrl function', () => {
     it('should return true when the url is valid', () => {
-      const result = isValidUrl('http://www.google.com');
+      const result = isValidUrl('http://www.xyz.com');
       expect(result).toBeTruthy();
     });
 
     it('should return false when the url is invalid', () => {
-      const result = isValidUrl('httpxxxx://www.google.com');
+      const result = isValidUrl('http:#||www.xyz.com');
       expect(result).toBeFalsy();
     });
 

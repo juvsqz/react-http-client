@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import { HttpClientConfiguration } from './types';
 import { defaultConfig } from './config';
 
