@@ -2,7 +2,7 @@ import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { render, waitFor } from '@testing-library/react';
 
-import { useHttpClient } from 'src';
+import useHttpClient from 'src';
 import { DEFAULT_HTTP_CLIENT_RESPONSE, defaultConfig } from 'src/config';
 import HttpClientContextConfig from 'src/context-config';
 import { HttpClientCallerOptions, HttpClientConfiguration } from 'src/types';
