@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import HttpClientContextConfig from 'src/context-config';
-import { HttpClientConfiguration } from 'src';
+import { HttpClientConfiguration } from 'src/types';
 import { DEFAULT_HTTP_CLIENT_RESPONSE } from 'src/config';
 
 describe('HttpClientContextConfig', () => {

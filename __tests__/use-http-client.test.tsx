@@ -2,16 +2,12 @@ import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { render, waitFor } from '@testing-library/react';
 
-import {
-  useHttpClient,
-  HttpClientConfiguration,
-  HttpClientCallerOptions
-} from 'src';
+import { useHttpClient } from 'src';
 import { DEFAULT_HTTP_CLIENT_RESPONSE, defaultConfig } from 'src/config';
 import HttpClientContextConfig from 'src/context-config';
+import { HttpClientCallerOptions, HttpClientConfiguration } from 'src/types';
 
 const TEST_URL = 'https://api.xyz.com';
-const INVALID_TEST_URL = '$https||api.xyz.com';
 
 // Mock the hook's default config
 // to spy on the call
@@ -136,33 +132,6 @@ describe('useHttpClient hook', () => {
   it('should throw an error when url is not provided', () => {
     const { result } = renderHook(() => useHttpClient());
     expect(result.current({})).rejects.toThrowError('URL should not be empty!');
-  });
-
-  it('should throw an error when providing an incorrect url', () => {
-    const { result } = renderHook(() => useHttpClient(INVALID_TEST_URL));
-    expect(result.current({})).rejects.toThrowError(
-      `${INVALID_TEST_URL} is not a valid URL!`
-    );
-  });
-
-  it('should throw an error when providing an incorrect url path', () => {
-    const { result } = renderHook(() => useHttpClient());
-    expect(
-      result.current({
-        path: INVALID_TEST_URL
-      })
-    ).rejects.toThrowError(`${INVALID_TEST_URL} is not a valid URL!`);
-  });
-
-  it('should throw an error when providing an incorrect url and url path combination', () => {
-    const { result } = renderHook(() => useHttpClient(INVALID_TEST_URL));
-    expect(
-      result.current({
-        path: INVALID_TEST_URL
-      })
-    ).rejects.toThrowError(
-      `${INVALID_TEST_URL}${INVALID_TEST_URL} is not a valid URL!`
-    );
   });
 
   it('should be able to execute multiple http requests from different url paths using the same hook invocation', async () => {

@@ -2,7 +2,6 @@ import { useContext } from 'react';
 
 import HttpClientContextConfig from './context-config';
 import { HttpClientResponse, HttpClientCallerOptions } from './types';
-import { isValidUrl } from './utils';
 
 /**
  * This hook performs the http request from the requestHandler option and
@@ -44,7 +43,6 @@ function useHttpClient<O = RequestInit>(
     const url = (path ? `${_url || ''}${path}` : _url)?.trim();
 
     if (!url) throw new Error(`URL should not be empty!`);
-    if (!isValidUrl(url)) throw new Error(`${url} is not a valid URL!`);
 
     const response = await requestHandler<D>(url, options || {});
 
