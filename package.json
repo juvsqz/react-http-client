@@ -6,7 +6,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "rimraf dist && tsc -b tsconfig.build.json"
+    "build": "rimraf dist && tsc -b tsconfig.build.json",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -53,6 +54,7 @@
     "react-hooks-testing-library": "^0.6.0",
     "react-test-renderer": "^17.0.1",
     "rimraf": "^3.0.2",
+    "standard-version": "^9.1.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
