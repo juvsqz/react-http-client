@@ -6,13 +6,13 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "prepublish": "npm build",
+    "prepare": "npm build",
     "build": "rimraf dist && tsc -b tsconfig.build.json",
     "release": "standard-version"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juvsqz/react-http-client.git"
+    "url": "git+https://github.com/juvsqz/use-http-client.git"
   },
   "keywords": [
     "react",
@@ -24,9 +24,9 @@
   "author": "Julius Vasquez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/juvsqz/react-http-client/issues"
+    "url": "https://github.com/juvsqz/use-http-client/issues"
   },
-  "homepage": "https://github.com/juvsqz/react-http-client#readme",
+  "homepage": "https://github.com/juvsqz/use-http-client#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
