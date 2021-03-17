@@ -31,7 +31,6 @@ React hook library that allows us to perform centralized http requests within Re
 <li><a href="#httperrorresponse">HttpErrorResponse
 </a></li>
       </ul>
-<ul>
     </li>
      <li>
       <a href="#authors">Authors</a>
@@ -39,7 +38,6 @@ React hook library that allows us to perform centralized http requests within Re
      <li>
       <a href="#license">License</a>
     </li>
-    </ul>
   </ol>
 </details>
 
