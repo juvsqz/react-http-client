@@ -2,7 +2,44 @@
 
 React hook library that allows us to perform centralized http requests within React's ecosystem.
 
-
+<!-- TABLE OF CONTENTS -->
+<details open="false">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#installation">Installation</a>
+    </li>
+     <li>
+      <a href="#usage">Usage</a>
+      <ul>
+        <li><a href="#context">Context</a></li>
+          <li><a href="#implementation">Implementation</a></li>
+          <li><a href="#re-using-hook-instance">Re-using hook instance</a></li>
+          <li><a href="overriding-global-configuration">Overriding global configuration</a>
+</li>
+      </ul>
+    </li>
+     <li>
+      <a href="#api">API</a>
+      <ul>
+        <li><a href="#context-configuration">Context Configuration
+</a></li>
+<li><a href="#usehttpclient-hook">useHttpClient
+</a></li>
+<li><a href="#httpclientresponse">HttpClientResponse
+</a></li>
+<li><a href="#httperrorresponse">HttpErrorResponse
+</a></li>
+      </ul>
+    </li>
+     <li>
+      <a href="#authors">Authors</a>
+    </li>
+     <li>
+      <a href="#license">License</a>
+    </li>
+  </ol>
+</details>
 ## Installation
 ```bash
 # Using npm
@@ -225,7 +262,7 @@ function App() {
 |**`requestHandler`**| ``` (path: string, options: RequestInit) => Promise<HttpClientResponse>``` |A Promise that handles and performs the http request.  You can apply different http libraries since it only requires url path and options.
 |**`responseHandler`**| ``` (response: HttpClientResponse) => Promise<HttpClientResponse>``` |A Promise that handles default http responses such as handling 4xx & 5xx errors.
 
-### **`useHttpClient`**
+### **`useHttpClient`** (hook)
 
 #### Hook parameters
 |Name|Type|Description
