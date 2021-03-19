@@ -1,6 +1,6 @@
 {
   "name": "use-http-client",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React hook library for HTTP client",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
