@@ -1,5 +1,18 @@
 # useHttpClient
-
+<p>
+  <a href="https://github.com/facebook/react-native/blob/master/LICENSE">
+    <img src="https://badgen.net/npm/license/use-http-client" alt="useHttpClient is released under the MIT license." />
+  </a>
+  <a href="https://travis-ci.com/github/juvsqz/use-http-client">
+    <img src="https://travis-ci.com/juvsqz/use-http-client.svg?branch=main" alt="Travis CI build status." />
+  </a>
+   <a aria-label="Package size" href="https://bundlephobia.com/result?p=use-http-client">
+    <img alt="" src="https://badgen.net/bundlephobia/minzip/use-http-client">
+  </a>
+  <a href="https://codecov.io/gh/juvsqz/use-http-client">
+  <img src="https://codecov.io/gh/juvsqz/use-http-client/branch/main/graph/badge.svg?token=JG3F4SHW5G"/>
+  </a>
+</p>
 React hook library that allows us to perform centralized http requests within React's ecosystem.
 
 <!-- TABLE OF CONTENTS -->
