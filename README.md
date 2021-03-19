@@ -1,6 +1,6 @@
 # useHttpClient
 <p>
-  <a href="https://github.com/facebook/react-native/blob/master/LICENSE">
+  <a href="https://github.com/juvsqz/use-http-client/blob/main/LICENSE">
     <img src="https://badgen.net/npm/license/use-http-client" alt="useHttpClient is released under the MIT license." />
   </a>
   <a href="https://travis-ci.com/github/juvsqz/use-http-client">
@@ -16,8 +16,8 @@
 React hook library that allows us to perform centralized http requests within React's ecosystem.
 
 <!-- TABLE OF CONTENTS -->
-<details open="false">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+
+  ## Table of Contents
   <ol>
     <li>
       <a href="#installation">Installation</a>
